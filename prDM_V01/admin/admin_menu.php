@@ -1,9 +1,9 @@
-
+<!-- Con este codigo php logras saber si el hay una sesión iniciada -->
 <?php
 
     session_start();
 
-    require "db.php";
+    include("../db.php");
 
     if( isset($_SESSION['user_id']) ){
 
@@ -28,33 +28,32 @@
     <head>
         <meta charset = "utf-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
-        <title> Bienvenido a El Descanso Medieval </title>
-        <link rel = "stylesheet" href = "assets/styles.css">
+        <title> Menu Admin </title>
+        <link rel = "stylesheet" href = "/prDM_V01/assets/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
-        <?php require 'partials/header.php' ?>
-
-        <h1> VISITANOS </h1>
-        <p> Ni los europeos lograron descansar tan bien luego de la peste negra como tú
-            lo harás en nuestras cómodas habitaciones. </p>
-
-        <img src = "img/hotel.jpg"><br>
+        <?php require '../partials/header.php' ?>
 
         <?php if( !empty($user) ): ?>
 
-            <br><a href = "logout.php"> Cerrar sesión </a><br>
+          <h1> <a href = "report_reserva.php"> Obtener reporte de reservas </a> </h1>
+
+            <h1> <a href = "hab_admin.php"> Administrar habitaciones </a> </h1>
+
+            <h1> <a href = "convert_admin.php"> Volver un usuario administrador </a> </h1>
+
+            <a href = "../logout.php"> Cerrar sesión </a>
 
         <?php else: ?>
 
-            <br><a href = "login.php"> Iniciar sesión </a> o
-            <a href = "signup.php"> Registrarse </a><br>
+            <h1> Seleccione una opción </h1>
+            <a href = "../login.php"> Iniciar sesión </a> o
+            <a href = "../signup.php"> Registrarse </a>
 
         <?php endif; ?>
-
-        <br><br>
 
     </body>
 

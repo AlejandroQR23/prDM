@@ -1,16 +1,140 @@
-body{
+* {
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
     margin: 0;
     padding: 0;
-    padding-top: 8rem;
+    padding-top: 7rem;
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 1.2rem;
     line-height: 1.6em;
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
 }
 
 h1 {
     font-size: 2rem;
     line-height: 1.3em;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#rooms li {
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+input[type = "text"], input[type= "password"], input[type = "date"] {
+    outline: none;
+    padding: 20px;
+    display: block;
+    width: 400px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    margin: 20px auto;
+}
+
+input[type = "date"]{
+    width: 300px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+}
+
+.formulario input[type = "radio"]{
+    display: none;
+}
+
+.formulario input[type = "radio"]:checked + label {
+    padding: 5px 15px;
+    background: #333;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.formulario input[type = "radio"]:checked + label:before {
+    display: none;
+}
+
+.formulario .radio label {
+    color: #333;
+    padding: 5px 15px 5px 51px;
+    display: inline-block;
+    position: relative;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.formulario .radio label:hover {
+    background-color: #9c9c9c;
+}
+
+.formulario .radio label:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    left: 15px;
+    top: 7px;
+    position: absolute;
+    display: inline-block;
+    background: none;
+    border: 3px solid #333;
+    border-radius: 50%;
+}
+
+input[type = "submit"]{
+    padding: 10px;
+    color: #fff;
+    background: #333;
+    width: 320px;
+    margin: 20px auto;
+    margin-top: 0;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type = "submit"]:hover {
+    background-color: #4a4a4a;
 }
 
 .header {
@@ -66,4 +190,101 @@ h1 {
 
 .navigation ul li a:hover {
     background: #4a4a4a;
+}
+
+.gallery {
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery li {
+    margin: 5px;
+}
+
+.gallery img {
+    width: 350px;
+    height: 200px;
+}
+
+.modal {
+    display: none;
+}
+
+.modal:target {
+    display: block;
+    position: fixed;
+    background: rgba( 0, 0, 0, 0.8 );
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal h3 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;s
+}
+
+.image {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image a {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.image a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+}
+
+.image img {
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+    border: 7px solid #fff;
+    box-sizing: border-box;
+}
+
+.close {
+    display: block;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    margin: 15px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 25px;
+}
+
+.meet, .contact {
+    margin: auto;
+    text-align: justify;
+    width: 50%
+}
+
+.meet h2 {
+    text-align: center;
 }

@@ -1,5 +1,3 @@
-# prDM
-Administración del hotel "Descanso Medieval"
 
 <h1> Description </h1>
 
